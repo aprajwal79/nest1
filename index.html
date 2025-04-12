@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2D Nesting Tool for Cloth Fabric Cutting</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>2D Nesting Tool</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Settings</a></li>
+                    <li><a href="#">Help</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <section class="upload-section">
+                <h2>Upload Files</h2>
+                <div class="file-upload-container">
+                    <div class="file-upload">
+                        <h3>DLX File</h3>
+                        <div class="upload-box" id="dlx-upload">
+                            <img src="upload-icon.svg" alt="Upload" class="upload-icon">
+                            <p>Drop your DLX file here or</p>
+                            <label for="dlx-file" class="upload-btn">Browse Files</label>
+                            <input type="file" id="dlx-file" accept=".dlx" hidden>
+                            <p class="selected-file" id="dlx-file-name">No file selected</p>
+                        </div>
+                    </div>
+
+                    <div class="file-upload">
+                        <h3>RUL File</h3>
+                        <div class="upload-box" id="rul-upload">
+                            <img src="upload-icon.svg" alt="Upload" class="upload-icon">
+                            <p>Drop your RUL file here or</p>
+                            <label for="rul-file" class="upload-btn">Browse Files</label>
+                            <input type="file" id="rul-file" accept=".rul" hidden>
+                            <p class="selected-file" id="rul-file-name">No file selected</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="process-btn" class="primary-btn" disabled>Process Files</button>
+                    <button id="clear-btn" class="secondary-btn">Clear</button>
+                </div>
+            </section>
+
+            <section class="output-section">
+                <h2>Output</h2>
+                <div class="output-container">
+                    <div class="output-info">
+                        <p>Your HLt file will appear here after processing</p>
+                        <div class="output-placeholder">
+                            <p>No output generated yet</p>
+                        </div>
+                    </div>
+                    <button id="download-btn" class="primary-btn" disabled>Download HLt File</button>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 2D Nesting Tool for Cloth Fabric Cutting</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html> 
