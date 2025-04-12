@@ -1,10 +1,10 @@
 # 2D Nesting Tool for Cloth Fabric Cutting
 
-A simple web-based UI for cloth fabric cutting with 2D nesting capability. This tool allows users to upload DLX and RUL files and generate HLt output files.
+A simple web-based UI for cloth fabric cutting with 2D nesting capability. This tool allows users to upload dxf and RUL files and generate HLt output files.
 
 ## Features
 
-- File upload interface for DLX and RUL files
+- File upload interface for dxf and RUL files
 - Drag-and-drop functionality
 - Simple menu navigation
 - Output generation (UI only, functionality not implemented)
@@ -12,7 +12,7 @@ A simple web-based UI for cloth fabric cutting with 2D nesting capability. This 
 ## Usage
 
 1. Open `index.html` in a web browser
-2. Upload a DLX file by clicking on the upload area or dragging and dropping
+2. Upload a dxf file by clicking on the upload area or dragging and dropping
 3. Upload a RUL file similarly
 4. Click the "Process Files" button (functionality not implemented)
 5. Once processed, download the resulting HLt file

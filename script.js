@@ -1,17 +1,17 @@
 // DOM Elements
-const dlxFileInput = document.getElementById('dlx-file');
+const dxfFileInput = document.getElementById('dxf-file');
 const rulFileInput = document.getElementById('rul-file');
-const dlxFileName = document.getElementById('dlx-file-name');
+const dxfFileName = document.getElementById('dxf-file-name');
 const rulFileName = document.getElementById('rul-file-name');
-const dlxUploadBox = document.getElementById('dlx-upload');
+const dxfUploadBox = document.getElementById('dxf-upload');
 const rulUploadBox = document.getElementById('rul-upload');
 const processBtn = document.getElementById('process-btn');
 const clearBtn = document.getElementById('clear-btn');
 const downloadBtn = document.getElementById('download-btn');
 
 // File upload handlers
-dlxFileInput.addEventListener('change', function() {
-    handleFileSelect(this, dlxFileName);
+dxfFileInput.addEventListener('change', function() {
+    handleFileSelect(this, dxfFileName);
     checkFilesUploaded();
 });
 
@@ -21,8 +21,8 @@ rulFileInput.addEventListener('change', function() {
 });
 
 // Click handlers for upload boxes
-dlxUploadBox.addEventListener('click', function() {
-    dlxFileInput.click();
+dxfUploadBox.addEventListener('click', function() {
+    dxfFileInput.click();
 });
 
 rulUploadBox.addEventListener('click', function() {
@@ -30,7 +30,7 @@ rulUploadBox.addEventListener('click', function() {
 });
 
 // Drag and drop handlers
-setupDragAndDrop(dlxUploadBox, dlxFileInput, dlxFileName);
+setupDragAndDrop(dxfUploadBox, dxfFileInput, dxfFileName);
 setupDragAndDrop(rulUploadBox, rulFileInput, rulFileName);
 
 // Process button click handler
@@ -65,7 +65,7 @@ function handleFileSelect(input, fileNameElement) {
 }
 
 function checkFilesUploaded() {
-    if (dlxFileInput.files.length > 0 && rulFileInput.files.length > 0) {
+    if (dxfFileInput.files.length > 0 && rulFileInput.files.length > 0) {
         processBtn.disabled = false;
     } else {
         processBtn.disabled = true;
@@ -73,13 +73,13 @@ function checkFilesUploaded() {
 }
 
 function resetFileInputs() {
-    dlxFileInput.value = '';
+    dxfFileInput.value = '';
     rulFileInput.value = '';
-    dlxFileName.textContent = 'No file selected';
+    dxfFileName.textContent = 'No file selected';
     rulFileName.textContent = 'No file selected';
-    dlxFileName.style.color = '#666';
+    dxfFileName.style.color = '#666';
     rulFileName.style.color = '#666';
-    dlxUploadBox.style.borderColor = '#ccc';
+    dxfUploadBox.style.borderColor = '#ccc';
     rulUploadBox.style.borderColor = '#ccc';
     processBtn.disabled = true;
 }
